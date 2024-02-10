@@ -34,7 +34,7 @@ public class Retractor extends SubsystemBase {
   private static final int kMotorPort = 0;
 
   private static final boolean kInvertMotor = false;
-  private static final int kCurrentLimit = 20;
+  private static final int kCurrentLimit = 40;
 
   private static final double kP = 0.000;
   private static final double kI = 0.000;
