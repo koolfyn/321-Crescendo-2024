@@ -65,8 +65,8 @@ public class IntakeRetractor extends SubsystemBase {
   }
 
   @Override
-  public void periodic() {
-
+  public void periodic(){
+    
     retractorPIDController.setD(kD);
     retractorPIDController.setP(kP);
     retractorPIDController.setI(kI);
@@ -75,10 +75,9 @@ public class IntakeRetractor extends SubsystemBase {
     retractorMotor.getOutputCurrent();
     retractorMotor.set(100);
 
-    // pivotcontrolleroutput = controller.calculate(stuff)
-    // pivotMotor.set(Output)
- 
   }
+
+  
 
 //   public boolean limitSwitchTriggered() {
 //     return !this.retractorLimitSwitch.get();
@@ -106,4 +105,14 @@ public void resetEncoder() {
     return !this.retractorBeamBreak.get();
   }
 
+
+  @Override
+  public void simulationPeriodic() {
+
+    System.out.print("ooo");
+
+    // pivotcontrolleroutput = controller.calculate(stuff)
+    // pivotMotor.set(Output)
+ 
+  }
 }
